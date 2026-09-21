@@ -1,0 +1,177 @@
+.fuels-page { background: #fff; color: #32373c; }
+
+.fuels-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #252a2d;
+}
+
+.fuels-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 10, 13, .7), rgba(6, 10, 13, .08) 72%),
+    linear-gradient(0deg, rgba(0, 0, 0, .34), transparent 59%),
+    url("assets/images/fuels/hero.jpeg") center / cover no-repeat;
+}
+
+.fuels-hero__content { position: relative; z-index: 1; padding-top: 165px; padding-bottom: 72px; }
+
+.fuels-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 100px;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+.fuels-breadcrumbs a { color: inherit; text-decoration: none; }
+
+.fuels-kicker {
+  margin: 0 0 14px;
+  color: #d71920;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.fuels-hero .fuels-kicker { color: #fff; }
+.fuels-hero h1 { margin: 0; color: #fff; font-size: clamp(58px, 6vw, 88px); font-weight: 650; line-height: .98; letter-spacing: -.048em; }
+
+.fuels-intro { padding-top: clamp(72px, 8vw, 116px); padding-bottom: clamp(78px, 8vw, 120px); }
+.fuels-intro p { max-width: 1100px; margin: 0; color: #444a4f; font-size: clamp(21px, 2vw, 29px); line-height: 1.52; letter-spacing: -.014em; }
+
+.fuels-heading { margin: 0; color: #30353a; font-size: clamp(39px, 4.2vw, 62px); font-weight: 620; line-height: 1.03; letter-spacing: -.04em; }
+
+.fuels-products { padding: clamp(78px, 8vw, 116px) 0 clamp(90px, 9vw, 132px); background: #f1f2f2; }
+.fuels-products__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 45px; }
+
+.fuel-card { display: flex; min-width: 0; flex-direction: column; background: #fff; }
+.fuel-card__image { min-height: 345px; overflow: hidden; }
+.fuel-card__image img { width: 100%; height: 100%; min-height: 345px; display: block; object-fit: cover; transition: transform .65s ease; }
+.fuel-card:hover img { transform: scale(1.035); }
+.fuel-card__copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 34px 36px 38px; }
+.fuel-card h3 { margin: 0 0 17px; font-size: clamp(29px, 2.8vw, 41px); font-weight: 620; line-height: 1.08; letter-spacing: -.027em; }
+.fuel-card p { margin: 0; color: #575d62; font-size: 16px; line-height: 1.64; }
+
+.fuel-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 27px;
+  border: 0;
+  border-bottom: 2px solid #d71920;
+  padding: 0 0 7px;
+  background: transparent;
+  color: #30353a;
+  font: 700 12px/1.2 "ORLEN Sans", Arial, sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fuel-card__toggle:hover,
+.fuel-card__toggle:focus-visible { color: #d71920; }
+
+.fuel-card__detail { margin-top: 24px; padding-top: 22px; border-top: 1px solid #d6d9db; color: #4f555a; font-size: 15px; line-height: 1.62; }
+
+.fuels-information { padding: clamp(82px, 9vw, 130px) 0; }
+.fuels-information__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 43px; }
+
+.fuel-info-card {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 31px;
+  color: #fff;
+  background: #292e32;
+}
+
+.fuel-info-card::before { content: ""; position: absolute; inset: 0; background-position: center; background-size: cover; transition: transform .65s ease; }
+.fuel-info-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.78), transparent 72%); }
+.fuel-info-card:nth-child(1)::before { background-image: url("assets/images/fuels/remit.jpeg"); }
+.fuel-info-card:nth-child(2)::before { background-image: url("assets/images/fuels/wholesale.jpeg"); }
+.fuel-info-card:nth-child(3)::before { background-image: url("assets/images/fuels/company.jpeg"); }
+.fuel-info-card:hover::before { transform: scale(1.04); }
+.fuel-info-card__copy { position: relative; z-index: 1; width: 100%; }
+.fuel-info-card .fuels-kicker { color: #fff; }
+.fuel-info-card h3 { margin: 0; color: #fff; font-size: 31px; font-weight: 620; line-height: 1.1; }
+
+.fuel-info-card button {
+  display: inline-flex;
+  gap: 17px;
+  margin-top: 24px;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  padding: 0 0 7px;
+  background: transparent;
+  color: #fff;
+  font: 700 12px/1.2 "ORLEN Sans", Arial, sans-serif;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.fuels-back { padding: 0 0 clamp(85px, 9vw, 130px); }
+.fuels-back__inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; border-top: 1px solid #cfd2d4; padding-top: 37px; }
+.fuels-back__inner p { margin: 0; color: #545a60; font-size: 18px; }
+
+.fuels-button {
+  min-height: 51px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border: 1px solid #d71920;
+  padding: 0 21px;
+  background: #d71920;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.fuels-dialog { width: min(680px, calc(100% - 36px)); border: 0; padding: 0; color: #34393e; background: #fff; box-shadow: 0 30px 85px rgba(0,0,0,.3); }
+.fuels-dialog::backdrop { background: rgba(6,10,13,.68); }
+.fuels-dialog__inner { position: relative; padding: 54px; }
+.fuels-dialog__close { position: absolute; top: 17px; right: 18px; width: 40px; height: 40px; border: 0; background: #f0f1f1; color: #30353a; font-size: 28px; cursor: pointer; }
+.fuels-dialog h2 { margin: 0; font-size: clamp(35px, 5vw, 49px); font-weight: 620; line-height: 1.04; letter-spacing: -.035em; }
+.fuels-dialog p { margin: 22px 0 0; color: #565c61; font-size: 17px; line-height: 1.67; }
+
+@media (max-width: 900px) {
+  .fuels-information__grid { grid-template-columns: 1fr 1fr; }
+  .fuel-info-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  .fuels-hero { min-height: 590px; }
+  .fuels-hero::before { background-position: 61% center; }
+  .fuels-hero__content { padding-top: 138px; padding-bottom: 53px; }
+  .fuels-breadcrumbs { margin-bottom: 100px; }
+  .fuels-hero h1 { font-size: 54px; }
+  .fuels-products__grid,
+  .fuels-information__grid { grid-template-columns: 1fr; }
+  .fuel-info-card:last-child { grid-column: auto; }
+  .fuel-card__image,
+  .fuel-card__image img { min-height: 270px; }
+  .fuel-card__copy { padding: 28px 24px 32px; }
+  .fuel-info-card { min-height: 420px; }
+  .fuels-back__inner { align-items: flex-start; flex-direction: column; }
+  .fuels-dialog__inner { padding: 50px 25px 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fuel-card__image img,
+  .fuel-info-card::before { transition: none; }
+}

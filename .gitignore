@@ -1,0 +1,6 @@
+.chrome-*/
+.vscode/
+
+*.log
+.DS_Store
+Thumbs.dbassets.zip

@@ -1,0 +1,489 @@
+.stop-cafe-page {
+  background: #fff;
+  color: #252a2e;
+}
+
+.stop-hero {
+  position: relative;
+  min-height: 670px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #3c302b;
+}
+
+.stop-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,10,8,.68), rgba(15,10,8,.08) 72%),
+    linear-gradient(0deg, rgba(0,0,0,.34), transparent 58%),
+    url("assets/images/stop-cafe/hero.jpeg") center/cover no-repeat;
+  transform: scale(1.01);
+}
+
+.stop-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 178px 0 82px;
+}
+
+.stop-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 70px;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+.stop-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stop-kicker {
+  margin: 0 0 15px;
+  color: #d71920;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.stop-hero .stop-kicker { color: #fff; }
+
+.stop-hero h1 {
+  max-width: 730px;
+  margin: 0;
+  font-size: clamp(58px, 7vw, 102px);
+  font-weight: 650;
+  line-height: .96;
+  letter-spacing: -.05em;
+}
+
+.stop-hero__lead {
+  margin: 27px 0 0;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.4;
+}
+
+.stop-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.stop-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  border: 1px solid #d71920;
+  padding: 0 22px;
+  background: #d71920;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .2s ease;
+}
+
+.stop-button:hover,
+.stop-button:focus-visible { background: #b9141d; border-color: #b9141d; }
+
+.stop-button--outline {
+  border-color: #fff;
+  background: transparent;
+}
+
+.stop-button--outline:hover,
+.stop-button--outline:focus-visible { background: #fff; border-color: #fff; color: #d71920; }
+
+.stop-subnav {
+  position: sticky;
+  z-index: 30;
+  top: var(--header-h);
+  border-bottom: 1px solid #d8dbdd;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(10px);
+}
+
+.stop-subnav .page-width {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.stop-subnav .page-width::-webkit-scrollbar { display: none; }
+
+.stop-subnav a {
+  flex: 0 0 auto;
+  padding: 19px 27px 17px 0;
+  color: #444a4e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.stop-subnav a:hover,
+.stop-subnav a:focus-visible { color: #d71920; }
+
+.stop-section {
+  padding: clamp(82px, 9vw, 132px) 0;
+  scroll-margin-top: calc(var(--header-h) + 55px);
+}
+
+.stop-heading {
+  margin: 0;
+  color: #2f3539;
+  font-size: clamp(40px, 4.7vw, 68px);
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -.042em;
+}
+
+.stop-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.stop-feature__image {
+  min-height: 650px;
+}
+
+.stop-feature__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.stop-feature__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(65px, 8vw, 125px);
+  background: #fff;
+}
+
+.stop-feature__copy > p:not(.stop-kicker) {
+  margin: 27px 0 0;
+  color: #555d62;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.stop-feature__copy .stop-button { align-self: flex-start; margin-top: 31px; }
+
+.stop-feature--reverse .stop-feature__image { order: 2; }
+.stop-feature--reverse .stop-feature__copy { order: 1; background: #f2f3f3; }
+
+.stop-menu {
+  background: #f0f2f2;
+}
+
+.stop-menu__heading {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: clamp(45px, 8vw, 125px);
+  align-items: end;
+}
+
+.stop-menu__heading > p {
+  max-width: 690px;
+  margin: 0;
+  color: #596166;
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.stop-menu__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 52px;
+}
+
+.stop-menu__filter {
+  min-height: 43px;
+  border: 1px solid #cbd0d2;
+  border-radius: 24px;
+  padding: 0 18px;
+  background: #fff;
+  color: #bd1a24;
+  font: 650 12px/1 "ORLEN Sans", Arial, sans-serif;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.stop-menu__filter:hover,
+.stop-menu__filter:focus-visible { border-color: #d71920; }
+
+.stop-menu__filter[aria-pressed="true"] {
+  border-color: #d71920;
+  background: #d71920;
+  color: #fff;
+}
+
+.stop-menu__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 30px 0 14px;
+  color: #697075;
+  font-size: 12px;
+}
+
+.stop-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #cbd0d2;
+  border-left: 1px solid #cbd0d2;
+}
+
+.stop-menu-card {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #cbd0d2;
+  border-bottom: 1px solid #cbd0d2;
+  padding: 31px;
+  background: #fff;
+}
+
+.stop-menu-card small {
+  color: #d71920;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.stop-menu-card h3 {
+  margin: 35px 0 12px;
+  color: #30373b;
+  font-size: 27px;
+  font-weight: 650;
+  line-height: 1.08;
+}
+
+.stop-menu-card p {
+  margin: 0;
+  color: #60686d;
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.stop-coffee {
+  background: #1e3138;
+  color: #fff;
+}
+
+.stop-coffee__layout {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  align-items: center;
+  gap: clamp(55px, 9vw, 145px);
+}
+
+.stop-coffee__image {
+  min-height: 620px;
+  background: url("assets/images/stop-cafe/coffee.jpeg") center/cover no-repeat;
+}
+
+.stop-coffee .stop-kicker { color: #ff616a; }
+.stop-coffee .stop-heading { color: #fff; }
+
+.stop-coffee__copy > p {
+  margin: 27px 0 0;
+  color: rgba(255,255,255,.76);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.stop-coffee__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.stop-coffee__fact {
+  padding: 25px 20px 0 0;
+}
+
+.stop-coffee__fact strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #fff;
+  font-size: 21px;
+}
+
+.stop-coffee__fact span {
+  color: rgba(255,255,255,.58);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.stop-vege__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.stop-vege__copy {
+  padding: clamp(65px, 9vw, 135px);
+}
+
+.stop-vege__copy > p {
+  margin: 27px 0 0;
+  color: #596166;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.stop-vege__image {
+  min-height: 690px;
+  background: url("assets/images/stop-cafe/vege.jpeg") center/cover no-repeat;
+}
+
+.stop-vitay {
+  position: relative;
+  min-height: 610px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+}
+
+.stop-vitay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(4,10,15,.78), rgba(4,10,15,.12) 75%),
+    url("assets/images/stop-cafe/vitay.jpeg") center/cover no-repeat;
+}
+
+.stop-vitay__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 105px;
+  padding-bottom: 78px;
+}
+
+.stop-vitay .stop-kicker { color: #fff; }
+.stop-vitay .stop-heading { max-width: 760px; color: #fff; }
+
+.stop-vitay__content > p:not(.stop-kicker) {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: rgba(255,255,255,.84);
+  font-size: 17px;
+  line-height: 1.66;
+}
+
+.stop-vitay__content .stop-button { margin-top: 30px; }
+
+.stop-related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 46px;
+}
+
+.stop-related-card {
+  position: relative;
+  min-height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 30px;
+  color: #fff;
+  text-decoration: none;
+  background: #27363e;
+}
+
+.stop-related-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  transition: transform .55s ease;
+}
+
+.stop-related-card:nth-child(1)::before { background-image: linear-gradient(0deg,rgba(0,0,0,.75),transparent 75%),url("assets/images/retail/driving.jpeg"); }
+.stop-related-card:nth-child(2)::before { background-image: linear-gradient(0deg,rgba(0,0,0,.75),transparent 75%),url("assets/images/retail/orlen-paczka.jpeg"); }
+.stop-related-card:nth-child(3)::before { background-image: linear-gradient(0deg,rgba(0,0,0,.75),transparent 75%),url("assets/images/retail/orlen-w-ruchu.jpeg"); }
+
+.stop-related-card:hover::before { transform: scale(1.04); }
+
+.stop-related-card > * { position: relative; z-index: 1; }
+
+.stop-related-card small {
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.stop-related-card strong {
+  font-size: 30px;
+  font-weight: 650;
+  line-height: 1.08;
+}
+
+.stop-related-card span {
+  margin-top: 24px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .stop-feature__image { min-height: 540px; }
+  .stop-menu__grid { grid-template-columns: 1fr 1fr; }
+  .stop-coffee__layout { gap: 55px; }
+}
+
+@media (max-width: 800px) {
+  .stop-feature,
+  .stop-menu__heading,
+  .stop-coffee__layout,
+  .stop-vege__layout { grid-template-columns: 1fr; }
+  .stop-feature--reverse .stop-feature__image,
+  .stop-feature--reverse .stop-feature__copy { order: initial; }
+  .stop-feature__image { min-height: 500px; }
+  .stop-feature__copy { padding: 70px 25px; }
+  .stop-coffee__image,
+  .stop-vege__image { min-height: 520px; }
+  .stop-vege__copy { padding: 75px 25px; }
+  .stop-related__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .stop-hero { min-height: 650px; }
+  .stop-hero__content { padding: 145px 0 65px; }
+  .stop-breadcrumbs { margin-bottom: 55px; }
+  .stop-hero h1 { font-size: 57px; overflow-wrap: anywhere; }
+  .stop-menu__grid { grid-template-columns: 1fr; }
+  .stop-menu-card { min-height: 220px; }
+  .stop-coffee__facts { grid-template-columns: 1fr; }
+  .stop-coffee__fact { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .stop-coffee__fact:last-child { border-bottom: 0; }
+  .stop-coffee__image,
+  .stop-vege__image { min-height: 400px; }
+  .stop-vitay { min-height: 620px; }
+}

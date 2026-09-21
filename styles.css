@@ -1,0 +1,13 @@
+@import url("styles-base.css");
+@import url("footer.css");
+
+/* Mobile hero typography follows the ORLEN title scale. */
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 37px;
+    line-height: 44px;
+    letter-spacing: -.37px;
+  }
+
+  .hero h1 br { display: initial; }
+}

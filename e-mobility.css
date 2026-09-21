@@ -1,0 +1,695 @@
+.emobility-page {
+  background: #fff;
+  color: #2c3236;
+}
+
+.emobility-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #152932;
+}
+
+.emobility-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 15, 22, .84), rgba(5, 15, 22, .22) 72%),
+    linear-gradient(0deg, rgba(0,0,0,.47), transparent 58%),
+    url("assets/images/retail/charging.jpeg") center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+.emobility-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 190px 0 92px;
+}
+
+.emobility-kicker {
+  margin: 0 0 18px;
+  color: #d71920;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.emobility-hero .emobility-kicker { color: #fff; }
+
+.emobility-hero h1 {
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(56px, 7vw, 100px);
+  font-weight: 600;
+  line-height: .97;
+  letter-spacing: -.05em;
+}
+
+.emobility-hero p:last-of-type {
+  max-width: 680px;
+  margin: 28px 0 0;
+  font-size: clamp(19px, 1.8vw, 26px);
+  line-height: 1.48;
+}
+
+.emobility-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 38px;
+}
+
+.emobility-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  border: 1px solid #d71920;
+  padding: 0 22px;
+  background: #d71920;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .2s ease;
+}
+
+.emobility-button:hover,
+.emobility-button:focus-visible {
+  border-color: #b8151d;
+  background: #b8151d;
+}
+
+.emobility-button--outline {
+  border-color: #fff;
+  background: transparent;
+}
+
+.emobility-button--outline:hover,
+.emobility-button--outline:focus-visible {
+  border-color: #fff;
+  background: #fff;
+  color: #d71920;
+}
+
+.emobility-subnav {
+  position: sticky;
+  z-index: 30;
+  top: var(--header-h);
+  border-bottom: 1px solid #d9dcde;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(10px);
+}
+
+.emobility-subnav .page-width {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.emobility-subnav .page-width::-webkit-scrollbar { display: none; }
+
+.emobility-subnav a {
+  flex: 0 0 auto;
+  padding: 19px 25px 17px 0;
+  color: #40464a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.emobility-subnav a:hover,
+.emobility-subnav a:focus-visible { color: #d71920; }
+
+.emobility-section {
+  padding: clamp(82px, 9vw, 132px) 0;
+  scroll-margin-top: calc(var(--header-h) + 60px);
+}
+
+.emobility-heading {
+  margin: 0;
+  color: #30373b;
+  font-size: clamp(40px, 4.7vw, 68px);
+  font-weight: 600;
+  line-height: 1.03;
+  letter-spacing: -.04em;
+}
+
+.emobility-intro {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: clamp(50px, 9vw, 145px);
+  align-items: start;
+}
+
+.emobility-intro__copy {
+  padding-top: 34px;
+}
+
+.emobility-intro__copy p {
+  margin: 0 0 20px;
+  color: #555d62;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.emobility-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 70px;
+  border-top: 1px solid #cfd3d5;
+  border-bottom: 1px solid #cfd3d5;
+}
+
+.emobility-stat {
+  min-height: 205px;
+  padding: 42px 35px;
+  border-right: 1px solid #cfd3d5;
+}
+
+.emobility-stat:last-child { border-right: 0; }
+
+.emobility-stat strong {
+  display: block;
+  margin-bottom: 13px;
+  color: #d71920;
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: 550;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.emobility-stat span {
+  color: #454c50;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.emobility-tools {
+  background: #f1f2f2;
+}
+
+.emobility-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 52px;
+  border-top: 1px solid #cdd1d3;
+  border-left: 1px solid #cdd1d3;
+}
+
+.emobility-card {
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #cdd1d3;
+  border-bottom: 1px solid #cdd1d3;
+  padding: 34px 28px;
+  background: #fff;
+}
+
+.emobility-card__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
+  background: #edf0f1;
+  color: #d71920;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.emobility-card h3 {
+  margin: 42px 0 13px;
+  color: #30373b;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.emobility-card p {
+  margin: 0 0 24px;
+  color: #60686d;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.emobility-card a {
+  margin-top: auto;
+  color: #c41c26;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.emobility-chargers {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: 700px;
+}
+
+.emobility-chargers__image {
+  min-height: 580px;
+  background: url("assets/images/retail/charging.jpeg") center/cover no-repeat;
+}
+
+.emobility-chargers__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px clamp(45px, 7vw, 115px);
+  background: #1b303a;
+  color: #fff;
+}
+
+.emobility-chargers__copy .emobility-kicker { color: #ff626b; }
+.emobility-chargers__copy .emobility-heading { color: #fff; }
+
+.emobility-chargers__copy > p {
+  margin: 27px 0 0;
+  color: rgba(255,255,255,.79);
+  font-size: 17px;
+  line-height: 1.67;
+}
+
+.emobility-connectors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.emobility-connector {
+  padding: 18px 14px;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.emobility-connector strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.emobility-connector span {
+  color: rgba(255,255,255,.66);
+  font-size: 12px;
+}
+
+.emobility-steps__layout {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: clamp(55px, 9vw, 145px);
+  margin-top: 58px;
+}
+
+.emobility-step-list {
+  border-top: 1px solid #cfd3d5;
+}
+
+.emobility-step-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  border-bottom: 1px solid #cfd3d5;
+  padding: 23px 0;
+  background: transparent;
+  color: #3c4347;
+  font: 600 18px/1.3 "ORLEN Sans", Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.emobility-step-button span:first-child {
+  color: #d71920;
+  font-size: 13px;
+}
+
+.emobility-step-button span:last-child {
+  color: #d71920;
+  font-size: 24px;
+  transition: transform .2s ease;
+}
+
+.emobility-step-button.is-active { color: #d71920; }
+.emobility-step-button.is-active span:last-child { transform: rotate(45deg); }
+
+.emobility-step-panel {
+  min-height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(38px, 6vw, 80px);
+  background: #f0f2f2;
+}
+
+.emobility-step-panel span {
+  color: #d71920;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.emobility-step-panel h3 {
+  max-width: 620px;
+  margin: 22px 0 17px;
+  color: #30373b;
+  font-size: clamp(31px, 3.1vw, 46px);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.emobility-step-panel p {
+  max-width: 660px;
+  margin: 0;
+  color: #596166;
+  font-size: 17px;
+  line-height: 1.66;
+}
+
+.emobility-app {
+  background: #eceeef;
+}
+
+.emobility-app__layout {
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: clamp(50px, 9vw, 145px);
+  align-items: center;
+}
+
+.emobility-app__image {
+  min-height: 620px;
+  background: url("assets/images/retail/app-orlen-charge.jpeg") center/cover no-repeat;
+}
+
+.emobility-app__copy > p {
+  margin: 27px 0 0;
+  color: #596166;
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.emobility-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 42px;
+  margin-top: 38px;
+  padding: 0;
+  list-style: none;
+}
+
+.emobility-benefits li {
+  position: relative;
+  padding: 18px 0 18px 30px;
+  border-top: 1px solid #cbd0d2;
+  color: #3f474b;
+  line-height: 1.5;
+}
+
+.emobility-benefits li::before {
+  content: "✓";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  color: #d71920;
+  font-weight: 700;
+}
+
+.emobility-faq {
+  background: #fff;
+}
+
+.emobility-faq__layout {
+  display: grid;
+  grid-template-columns: .62fr 1.38fr;
+  gap: clamp(50px, 9vw, 145px);
+}
+
+.emobility-faq-list {
+  border-top: 1px solid #cfd3d5;
+}
+
+.emobility-faq-item {
+  border-bottom: 1px solid #cfd3d5;
+}
+
+.emobility-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 0;
+  padding: 25px 0;
+  background: transparent;
+  color: #30373b;
+  font: 600 18px/1.4 "ORLEN Sans", Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.emobility-faq-question span:last-child {
+  color: #d71920;
+  font-size: 26px;
+  transition: transform .2s ease;
+}
+
+.emobility-faq-question[aria-expanded="true"] { color: #d71920; }
+.emobility-faq-question[aria-expanded="true"] span:last-child { transform: rotate(45deg); }
+
+.emobility-faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease;
+}
+
+.emobility-faq-answer > div { overflow: hidden; }
+.emobility-faq-question[aria-expanded="true"] + .emobility-faq-answer { grid-template-rows: 1fr; }
+
+.emobility-faq-answer p {
+  margin: 0;
+  padding: 0 45px 26px 0;
+  color: #5d656a;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.emobility-contact {
+  background: #d71920;
+  color: #fff;
+}
+
+.emobility-contact__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.emobility-contact .emobility-kicker { color: #fff; }
+.emobility-contact .emobility-heading { max-width: 710px; color: #fff; }
+
+.emobility-contact__phones {
+  display: grid;
+  gap: 11px;
+}
+
+.emobility-contact__phones a {
+  color: #fff;
+  font-size: clamp(27px, 3vw, 43px);
+  font-weight: 550;
+  letter-spacing: -.03em;
+  text-decoration: none;
+}
+
+.emobility-contact__phones span {
+  color: rgba(255,255,255,.75);
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .emobility-card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .emobility-intro,
+  .emobility-steps__layout,
+  .emobility-app__layout,
+  .emobility-faq__layout { grid-template-columns: 1fr; }
+  .emobility-intro__copy { padding-top: 0; }
+  .emobility-chargers { grid-template-columns: 1fr; }
+  .emobility-chargers__image { min-height: 500px; }
+  .emobility-app__image { min-height: 500px; }
+  .emobility-contact__layout { display: block; }
+  .emobility-contact__phones { margin-top: 38px; }
+}
+
+@media (max-width: 700px) {
+  .emobility-hero { min-height: 650px; }
+  .emobility-hero__content { padding: 160px 0 70px; }
+  .emobility-hero h1 { font-size: clamp(48px, 13vw, 62px); overflow-wrap: anywhere; }
+  .emobility-subnav { top: var(--header-h); }
+  .emobility-stats,
+  .emobility-card-grid { grid-template-columns: 1fr; }
+  .emobility-stat { min-height: 0; border-right: 0; border-bottom: 1px solid #cfd3d5; }
+  .emobility-stat:last-child { border-bottom: 0; }
+  .emobility-card { min-height: 270px; }
+  .emobility-connectors,
+  .emobility-benefits { grid-template-columns: 1fr; }
+  .emobility-chargers__image,
+  .emobility-app__image { min-height: 380px; }
+  .emobility-chargers__copy { padding: 65px 22px; }
+  .emobility-step-panel { min-height: 340px; }
+  .emobility-contact__phones a { display: block; }
+}
+
+.emobility-estimator {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: clamp(45px, 8vw, 120px);
+  margin-top: 75px;
+  padding: clamp(42px, 6vw, 78px);
+  background: #1b303a;
+  color: #fff;
+}
+
+.emobility-estimator .emobility-kicker { color: #ff6871; }
+
+.emobility-estimator__intro h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 3.4vw, 49px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.emobility-estimator__intro > p:last-child {
+  margin: 25px 0 0;
+  color: rgba(255,255,255,.72);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.emobility-estimator__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 35px;
+}
+
+.emobility-estimator__fields label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 13px;
+  color: rgba(255,255,255,.8);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.emobility-estimator__fields label > span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.emobility-estimator__fields input {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  accent-color: #ef2632;
+  cursor: pointer;
+}
+
+.emobility-estimator__progress {
+  --charge-start: 20%;
+  --charge-target: 80%;
+  position: relative;
+  height: 10px;
+  margin: 45px 0 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,.16);
+}
+
+.emobility-estimator__progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--charge-start);
+  width: calc(var(--charge-target) - var(--charge-start));
+  background: #ed1c29;
+  transition: left .2s ease, width .2s ease;
+}
+
+.emobility-estimator__progress::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--charge-target);
+  width: 17px;
+  height: 17px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #ed1c29;
+  transform: translate(-50%, -50%);
+  transition: left .2s ease;
+}
+
+.emobility-estimator__results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.emobility-estimator__results strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 550;
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+
+.emobility-estimator__results span {
+  color: rgba(255,255,255,.64);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.emobility-estimator__note {
+  margin: 30px 0 0;
+  color: rgba(255,255,255,.5);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .emobility-estimator { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .emobility-estimator {
+    margin-top: 55px;
+    padding: 45px 22px;
+  }
+
+  .emobility-estimator__fields,
+  .emobility-estimator__results { grid-template-columns: 1fr; }
+}

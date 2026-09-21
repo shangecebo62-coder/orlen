@@ -1,0 +1,356 @@
+.paczka-page {
+  background: #fff;
+  color: #34383d;
+}
+
+.paczka-hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #3e3934;
+}
+
+.paczka-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 10, 12, .62), rgba(7, 10, 12, .06) 72%),
+    linear-gradient(0deg, rgba(0, 0, 0, .31), transparent 59%),
+    url("assets/images/orlen-paczka/hero.jpeg") center 49% / cover no-repeat;
+  transform: scale(1.005);
+}
+
+.paczka-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 160px;
+  padding-bottom: 69px;
+}
+
+.paczka-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 94px;
+  color: rgba(255, 255, 255, .78);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.paczka-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.paczka-kicker {
+  margin: 0 0 14px;
+  color: #d71920;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.paczka-hero .paczka-kicker { color: #fff; }
+
+.paczka-hero h1 {
+  max-width: 840px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(54px, 5.8vw, 82px);
+  font-weight: 650;
+  line-height: .99;
+  letter-spacing: -.046em;
+}
+
+.paczka-hero__lead {
+  max-width: 590px;
+  margin: 22px 0 0;
+  color: #fff;
+  font-size: clamp(18px, 1.7vw, 25px);
+  line-height: 1.43;
+}
+
+.paczka-button {
+  min-height: 51px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  margin-top: 29px;
+  border: 1px solid #d71920;
+  padding: 0 21px;
+  background: #d71920;
+  color: #fff;
+  font: 700 12px/1 "ORLEN Sans", Arial, sans-serif;
+  letter-spacing: .055em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+a.paczka-button:hover,
+a.paczka-button:focus-visible {
+  border-color: #b5121b;
+  background: #b5121b;
+  transform: translateY(-2px);
+}
+
+.paczka-button--inert {
+  cursor: default;
+  user-select: none;
+}
+
+.paczka-intro {
+  padding-top: clamp(68px, 7vw, 104px);
+  padding-bottom: clamp(72px, 8vw, 112px);
+}
+
+.paczka-intro p {
+  max-width: 1050px;
+  margin: 0;
+  color: #3e4348;
+  font-size: clamp(20px, 1.9vw, 28px);
+  line-height: 1.5;
+  letter-spacing: -.012em;
+}
+
+.paczka-intro p + p {
+  max-width: 920px;
+  margin-top: 31px;
+  color: #555b61;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.paczka-stats {
+  padding-bottom: clamp(76px, 9vw, 126px);
+}
+
+.paczka-stats__inner {
+  border-top: 1px solid #cfd2d4;
+  padding-top: 43px;
+}
+
+.paczka-stats h2,
+.paczka-related h2 {
+  margin: 0;
+  color: #30353a;
+  font-size: clamp(38px, 4vw, 59px);
+  font-weight: 620;
+  line-height: 1.04;
+  letter-spacing: -.038em;
+}
+
+.paczka-stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 47px;
+  border-bottom: 1px solid #cfd2d4;
+}
+
+.paczka-stat {
+  min-height: 242px;
+  padding: 0 50px 42px 0;
+}
+
+.paczka-stat + .paczka-stat {
+  border-left: 1px solid #cfd2d4;
+  padding-right: 0;
+  padding-left: clamp(35px, 7vw, 105px);
+}
+
+.paczka-stat strong {
+  display: block;
+  color: #d71920;
+  font-size: clamp(60px, 6.2vw, 92px);
+  font-weight: 350;
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+.paczka-stat h3 {
+  margin: 23px 0 9px;
+  color: #34383d;
+  font-size: clamp(23px, 2.2vw, 31px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.paczka-stat p {
+  margin: 0;
+  color: #63686d;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.paczka-finder {
+  position: relative;
+  min-height: 610px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #22282c;
+}
+
+.paczka-finder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 9, 12, .75), rgba(5, 9, 12, .08) 72%),
+    linear-gradient(0deg, rgba(0, 0, 0, .37), transparent 62%),
+    url("assets/images/orlen-paczka/parcel-locker.jpeg") center 50% / cover no-repeat;
+  transition: transform .75s ease;
+}
+
+.paczka-finder:hover::before { transform: scale(1.018); }
+
+.paczka-finder__copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 73px;
+}
+
+.paczka-finder .paczka-kicker { color: #fff; }
+
+.paczka-finder h2 {
+  max-width: 720px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(40px, 4.5vw, 67px);
+  font-weight: 620;
+  line-height: 1.03;
+  letter-spacing: -.04em;
+}
+
+.paczka-finder__note {
+  max-width: 600px;
+  margin: 23px 0 0;
+  color: rgba(255, 255, 255, .85);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.paczka-related {
+  padding-top: clamp(78px, 8vw, 115px);
+  padding-bottom: clamp(88px, 9vw, 132px);
+  background: #f1f2f2;
+}
+
+.paczka-related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 43px;
+}
+
+.paczka-related-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #34383d;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.paczka-related-card:hover,
+.paczka-related-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(20, 25, 29, .11);
+}
+
+.paczka-related-card__image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.paczka-related-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s ease;
+}
+
+.paczka-related-card:hover img { transform: scale(1.04); }
+
+.paczka-related-card__copy {
+  min-height: 248px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 29px 30px 31px;
+}
+
+.paczka-related-card small {
+  color: #d71920;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.paczka-related-card h3 {
+  margin: 16px 0 13px;
+  font-size: 26px;
+  font-weight: 620;
+  line-height: 1.12;
+}
+
+.paczka-related-card p {
+  margin: 0;
+  color: #5a6065;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.paczka-related-card span {
+  margin-top: auto;
+  padding-top: 23px;
+  color: #30353a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .paczka-related__grid { grid-template-columns: 1fr 1fr; }
+  .paczka-related-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 680px) {
+  .paczka-hero { min-height: 610px; }
+  .paczka-hero::before { background-position: 58% center; }
+  .paczka-hero__content { padding-top: 136px; padding-bottom: 52px; }
+  .paczka-breadcrumbs { margin-bottom: 96px; }
+  .paczka-hero h1 { font-size: 53px; }
+  .paczka-hero__lead { max-width: 310px; font-size: 18px; }
+  .paczka-intro p { font-size: 22px; }
+  .paczka-intro p + p { font-size: 16px; }
+  .paczka-stats__grid { grid-template-columns: 1fr; }
+  .paczka-stat { min-height: 0; padding: 0 0 37px; }
+  .paczka-stat + .paczka-stat { border-top: 1px solid #cfd2d4; border-left: 0; padding: 37px 0; }
+  .paczka-stat strong { font-size: 64px; }
+  .paczka-finder { min-height: 590px; }
+  .paczka-finder::before { background-position: 60% center; }
+  .paczka-finder__copy { padding-top: 130px; padding-bottom: 50px; }
+  .paczka-related__grid { grid-template-columns: 1fr; }
+  .paczka-related-card:last-child { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paczka-finder::before,
+  .paczka-related-card,
+  .paczka-related-card img { transition: none; }
+}
