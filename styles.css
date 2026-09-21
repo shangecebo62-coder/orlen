@@ -11,3 +11,83 @@
 
   .hero h1 br { display: initial; }
 }
+.home-whatsapp {
+  position: fixed;
+  right: clamp(18px, 3vw, 34px);
+  bottom: clamp(20px, 4vw, 38px);
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 10px 20px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, .38);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #20c861 0%, #128c7e 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: .01em;
+  box-shadow: 0 18px 42px rgba(8, 36, 28, .28), 0 4px 12px rgba(8, 36, 28, .16);
+  transform: translateY(0);
+  animation: whatsapp-attention 4.8s ease-in-out infinite;
+}
+.home-whatsapp:hover,
+.home-whatsapp:focus-visible {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(8, 36, 28, .34), 0 6px 14px rgba(8, 36, 28, .18);
+}
+.home-whatsapp__icon {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 50%;
+  background: #fff;
+  color: #128c7e;
+  fill: currentColor;
+  flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(18, 140, 126, .08);
+}
+.home-whatsapp__pulse {
+  position: absolute;
+  inset: -7px;
+  border: 1px solid rgba(37, 211, 102, .5);
+  border-radius: 999px;
+  animation: whatsapp-ring 2.6s ease-out infinite;
+}
+.home-whatsapp__text {
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+@keyframes whatsapp-attention {
+  0%, 62%, 100% { transform: translateY(0); }
+  68% { transform: translateY(-6px); }
+  74% { transform: translateY(0); }
+  80% { transform: translateY(-3px); }
+  86% { transform: translateY(0); }
+}
+@keyframes whatsapp-ring {
+  0% { opacity: .55; transform: scale(.94); }
+  78%, 100% { opacity: 0; transform: scale(1.18); }
+}
+@media (max-width: 560px) {
+  .home-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 60px;
+    min-height: 60px;
+    padding: 10px;
+    justify-content: center;
+  }
+  .home-whatsapp__text { display: none; }
+  .home-whatsapp__icon { width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-whatsapp,
+  .home-whatsapp__pulse { animation: none; }
+}
